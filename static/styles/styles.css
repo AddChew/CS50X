@@ -18,19 +18,10 @@ a {
     padding-bottom: 0rem !important;
 }
 
-/* Set ICA logo size */
-.ica-logo {
-    height: 5rem;
-}
-
-/* Set background color of top section in footer */
-.top-section {
-    background-color: #dadada !important;
-    padding: 1rem 2rem !important;
-}
-
-.sgds-footer>.bottom-section .row .col.is-12{
-    padding-top: .75rem;
+/* Set color for Top2Vec in footer */
+.sgds-footer span {
+    color: #b19cd9;
+    font-weight: bold;
 }
 
 /* Hide elements */
