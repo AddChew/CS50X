@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Download Results
+{% endblock %}
+
+
+{% block flash %}    
+    <div class="alert alert-success border text-center" role="alert">
+        Job completed!
+    </div>
+{% endblock %}
+
+
+{% block section %}
+    <p class="text-center ready">Your Top2Vec results are ready for download.</p>
+    <div class="d-flex justify-content-center">
+        <form action="{{ url_for('download_file') }}" method="get">
+            <input class="sgds-button is-primary" type="submit" value="Download">
+        </form>
+
+        <form action="{{ url_for('home') }}" method="get">  
+            <input class="sgds-button is-primary is-outlined" type="submit" value="Back">
+        </form>
+    </div>
+{% endblock %}

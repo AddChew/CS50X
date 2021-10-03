@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block javascript %}
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const progress = document.querySelector(".sgds-progress")
+
+            // Update progress bar
+            setInterval(() => {
+                if (progress.value === 100) progress.value = 0
+                else progress.value += 1
+            }, 100)
+
+            // Check job status
+            setInterval(() => {
+                $.ajax({
+                    type: "GET",
+                    url: "{{ url_for('query_progress') }}",
+                    success: function(result) {
+                        if (result.status == "done") window.location.href = "{{ url_for('get_results') }}"
+                    }
+                })
+            }, 1000)
+        })
+    </script>
+{% endblock %}
+
+
+{% block title %}
+    Job Sent!
+{% endblock %}
+
+
+{% block flash %}    
+    <div class="alert alert-success border text-center" role="alert">
+        Job sent!
+    </div>
+{% endblock %}
+
+
+{% block section %}    
+    <p class="h1 text-center progress-text">Processing...</p>
+    <progress class="sgds-progress is-primary" value="50" max="100" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></progress> 
+    <p class="text-center">Please do not close the application.</p>
+{% endblock %}
