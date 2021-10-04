@@ -1,15 +1,22 @@
 # Top2VecApp
 Top2VecApp is a desktop application, offering topic modelling capabilities based on [Top2Vec](https://github.com/ddangelov/Top2Vec) algorithm.
+
 ## Video Demo
-Please refer [here]() for a video demo of the application in action
+Please refer [here]() for a video demo of the application in action.
+
 ## How the application works
 placeholder
+
 ## Design choices
 The following issues were considered when building the application.
-#### Desktop vs web application?
-Initially, it was conceived for Top2VecApp to be a web application. Reason being that a web application does not require any prior setup on the users' end (i.e. the user does not need to install anything to run the application). All a user needs is an internet access and a web browser to use a web application. But resource constraints (i.e. insufficient RAM) on Heroku web server made this approach infeasible. 
 
-As such, Top2VecApp pivoted towards being a desktop application.
+#### Desktop vs web application?
+Initially, it was conceived for Top2VecApp to be a web application. This is because a web application does not require any prior setup from the users's end (i.e. the user need not install anything to run the application; all he needs is internet access and a web browser). But resource constraints (i.e. insufficient RAM) on Heroku cloud platform made this infeasible.
+
+As such, Top2VecApp pivoted from being a web application to being a desktop application. This is because local machines have significantly more computing power and memory as compared to cloud platforms (i.e. Heroku) and hence can better handle the payload incurred by Top2VecApp. Another reason why Top2VecApp became a desktop application is because user input cannot be trusted. Top2VecApp might behave in unexpected ways 
+
+
+ 
 #### Native desktop application vs embedded web application?
 #### Threading
 #### File download vs email?
