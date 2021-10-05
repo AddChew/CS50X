@@ -40,48 +40,7 @@ TO DO
 ```
 3. Upload CSV file containing the text that you want to cluster and follow the on screen instructions
 
-## Core Technologies
-The following libraries were used in Top2VecApp.
-
-#### Python
-1. Pyside2
-    - Used for creating the desktop GUI
-
-2. Flask
-    - Used for managing the backend logic of Top2VecApp and the rendering of HTML templates
-
-3. Flask_Reuploaded
-    - Used for managing file uploads
-
-4. Flask_Executor
-    - Used for multithreading 
-
-5. Pandas and Openpyxl
-    - Used for reading and writing excel files
-
-6. Onnxruntime
-    - Used for running the natural language processing (NLP) model
-
-7. Umap-learn
-    - Used for dimensionality reduction of the text embeddings
-
-8. Hdbscan & Sckit-learn
-    - Used for density based clustering of the text embeddings
-
-9. Numpy
-    - Used for high performant array operations
-
-#### JavaScript & CSS
-1. Bootstrap & SGDS
-    - Used for styling Top2VecApp
-
-2.  D3
-    - Used for parsing CSV files
-
-3.  JQuery
-    - Used for simplifying certain aspects of JavaScript
-
-## Design choices
+## Design Considerations
 The following issues were considered when building the application.
 
 #### Desktop vs web application
