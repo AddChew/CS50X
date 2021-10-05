@@ -5,7 +5,19 @@ Top2VecApp is a desktop application, offering topic modelling capabilities based
 Please refer [here]() for a video demo of Top2VecApp in action.
 
 ## How the application works
-TO DO
+At its core, Top2VecApp is a web application embedded into a desktop application.
+
+When the user launches Top2VecApp, he is directed to the file upload page, where he can upload a CSV file, select the column containing his text corpus and select two other columns (optional) for grouping the text corpus. Each time the file upload page is visited via a GET request (default), the storage folder within the application is cleared of its contents. When the user submits his CSV file as well as his selected columns, the CSV file is temporarily stored in the storage folder within the application.
+
+Upon storing the CSV file, a job is submitted to the worker thread and the user is directed to the progress page. Every second, the main application thread sends a GET request to the worker thread to query about the job status. Once the main application thread receives the signal from the worker thread that the job is completed, the user is directed to the download page where he can download the zipped job results.
+
+Underneath the hood, the job processed by the worker thread consists of the the following stages. 
+1.  Once the job is submitted, the CSV file is loaded into memory and its text corpus is tokenized (i.e. individual words are broken up into smaller subwords). 
+2.  The tokenized text corpus is then fed through the pretrained transformer-based natural language processing (NLP) model, [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), which outputs the corresponding text embeddings for the input text corpus (i.e. numerical vector representation of text). 
+3. Following which, the text embeddings are passed through Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) algorithm for dimensionality reduction.
+4. Thereafter, the compressed text embeddings are clustered into topics using Hierarchical Density-Based Spatial Clustering of Applications with Noise [HDBSCAN](https://github.com/scikit-learn-contrib/hdbscan) algorithm.
+5. An extractive summary of each topic is obtained based on the top 5 text content closest to the topic centroid in terms of cosine distance.
+6. The clustering results and extractive summaries are then written into two separate excel files, zipped together into a single folder for download.  
 
 ## Installation Instructions
 
@@ -47,9 +59,6 @@ The following issues were considered when building the application.
 Initially, it was conceived for Top2VecApp to be a web application. This is because a web application does not require any prior setup from the user's end (i.e. the user need not install anything to run the application; all he needs is internet access and a web browser). But resource constraints (i.e. insufficient RAM) on Heroku cloud platform made this infeasible.
 
 As such, Top2VecApp pivoted from being a web application to being a desktop application. This is because local machines have significantly more computing power and memory as compared to cloud platforms (i.e. Heroku) and hence can better handle the payload incurred by Top2VecApp. Another reason why Top2VecApp became a desktop application is because user input cannot be trusted. For instance, the user could navigate to urls within the web application via unintended ways or refresh the page even when he is told not to do so, and this would cause the web application to behave unexpectedly. Designing Top2VecApp as a desktop application allows for fine grain control over the application widgets (i.e. what widgets to include and their functionalities). This helps to prevent users from using Top2VecApp in unintended ways. For example, by excluding a url bar widget in Top2VecApp, users are prohibited from navigating to urls in unauthorised ways.
-
-#### Native desktop vs embedded web application
-TO DO
 
 #### Packaging of application
 Top2VecApp is bundled and distributed as a single executable file which contains all the required dependencies for the application to run. This is to minimise any prior setup required from the user's end. All the user needs to do is to download the executable file and launch it and he is all set to use Top2VecApp.
