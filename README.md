@@ -57,5 +57,32 @@ TO DO
 #### Packaging of application
 Top2VecApp is bundled and distributed as a single executable file which contains all the required dependencies for the application to run. This is to minimise any prior setup required from the user's end. All the user needs to do is to download the executable file and launch it and he is all set to use Top2VecApp.
 
-## Navigation of Project
-TO DO
+## Project Navigation
+app folder contains the source code for Top2VecApp
+
+#### desktop folder
+> Contains
+> - gui.py which contains the source code used for creating the desktop GUI
+
+#### models folder
+> Contains
+> - encoder.py
+> - pipeline.py
+> - tokenizer.py
+> - top2vec.py
+> - vocab.txt
+> - sent-transformer.onnx
+
+#### static folder
+> Contains
+> - appscripts folder
+> - images folder
+> - styles folder
+
+#### templates folder
+> Contains
+> - 
+
+#### app.py
+
+#### config.py
