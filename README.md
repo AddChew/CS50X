@@ -62,7 +62,7 @@ app folder contains the source code for Top2VecApp
 
 #### desktop folder
 - gui.py 
-> Contains the source code used for creating the desktop GUI
+> Contains helper classes for creating the desktop GUI
 
 #### models folder
 - encoder.py
@@ -85,16 +85,19 @@ app folder contains the source code for Top2VecApp
 
 #### static folder
 - appscripts folder
-> - Contains the JavaScript libraries and scripts used in Top2VecApp
+> Contains the JavaScript libraries and scripts used in Top2VecApp
 
 - images folder
-> 
-> - styles folder
+> Contains Top2VecApp desktop application icon
+
+- styles folder
+> Contains the stylesheets used for styling Top2VecApp
 
 #### templates folder
-> Contains
-> - 
+> Contains the HTML templates used in Top2VecApp
 
 #### app.py
+> Contains the backend logic of Top2VecApp
 
 #### config.py
+> Contains the configurations used for Top2VecApp
