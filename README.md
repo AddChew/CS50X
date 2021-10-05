@@ -61,25 +61,34 @@ Top2VecApp is bundled and distributed as a single executable file which contains
 app folder contains the source code for Top2VecApp
 
 #### desktop folder
-Contains
 - gui.py 
 > Contains the source code used for creating the desktop GUI
 
 #### models folder
-> Contains
-> - encoder.py
-> > Contains helper classes for loading the model and running model inference
-> - pipeline.py which contains helper classes for processing the input text corpus through Top2Vec algorithm and then saving the results to excel files
-> - tokenizer.py which contains helper functions and classes to tokenize text
-> - top2vec.py which is a lightweight version of the original [Top2Vec](https://github.com/ddangelov/Top2Vec) library
-> - vocab.txt which contains the tokens used for tokenizing text
-> - sent-transformer.onnx - the natural language processing (NLP) model used for obtaining the text embeddings
+- encoder.py
+> Contains helper classes for loading the model and running model inference
+
+- pipeline.py
+> Contains helper classes for processing the input text corpus through Top2Vec algorithm and then saving the results to excel files
+
+- tokenizer.py 
+> Contains helper functions and classes to tokenize text
+
+- top2vec.py
+> A lightweight version of the original [Top2Vec](https://github.com/ddangelov/Top2Vec) library
+
+- vocab.txt
+> Contains the tokens used for tokenizing text
+
+- sent-transformer.onnx
+> The natural language processing (NLP) model used for obtaining the text embeddings
 
 #### static folder
-> Contains
-> - appscripts folder
-> >
-> - images folder
+- appscripts folder
+> - Contains the JavaScript libraries and scripts used in Top2VecApp
+
+- images folder
+> 
 > - styles folder
 
 #### templates folder
