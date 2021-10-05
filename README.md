@@ -62,7 +62,7 @@ app folder contains the source code for Top2VecApp
 
 #### desktop folder
 - gui.py 
-> Contains helper classes for creating the desktop GUI
+    - Contains helper classes for creating the desktop GUI
 
 #### models folder
 - encoder.py
