@@ -2,7 +2,7 @@
 Top2VecApp is a desktop application, offering topic modelling capabilities based on [Top2Vec](https://github.com/ddangelov/Top2Vec) algorithm.
 
 ## Video demo
-Please refer [here]() for a video demo of Top2VecApp in action.
+Please refer [here](https://youtu.be/H4jQL4AT9aM) for a video demo of Top2VecApp in action.
 
 ## How the application works
 At its core, Top2VecApp is a web application embedded into a desktop application.
