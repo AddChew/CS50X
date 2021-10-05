@@ -62,11 +62,13 @@ app folder contains the source code for Top2VecApp
 
 #### desktop folder
 > Contains
-> - gui.py which contains the source code used for creating the desktop GUI
+> - gui.py 
+> > Contains the source code used for creating the desktop GUI
 
 #### models folder
 > Contains
-> - encoder.py which contains helper classes for loading the model and running model inference
+> - encoder.py
+> > Contains helper classes for loading the model and running model inference
 > - pipeline.py which contains helper classes for processing the input text corpus through Top2Vec algorithm and then saving the results to excel files
 > - tokenizer.py which contains helper functions and classes to tokenize text
 > - top2vec.py which is a lightweight version of the original [Top2Vec](https://github.com/ddangelov/Top2Vec) library
@@ -76,7 +78,7 @@ app folder contains the source code for Top2VecApp
 #### static folder
 > Contains
 > - appscripts folder
-> - -
+> >
 > - images folder
 > - styles folder
 
