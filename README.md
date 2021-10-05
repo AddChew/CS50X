@@ -61,9 +61,9 @@ Top2VecApp is bundled and distributed as a single executable file which contains
 app folder contains the source code for Top2VecApp
 
 #### desktop folder
-> Contains
-> - gui.py 
-> > Contains the source code used for creating the desktop GUI
+Contains
+- gui.py 
+> Contains the source code used for creating the desktop GUI
 
 #### models folder
 > Contains
