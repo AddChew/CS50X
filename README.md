@@ -22,7 +22,7 @@ Underneath the hood, the job processed by the worker thread consists of the the 
 ## Installation Instructions
 
 #### Run from executable file
-1. Download Top2VecApp from [here]() and unzip it
+1. Download Top2VecApp from [here](https://drive.google.com/file/d/1zXvJZV8OW4Tv4CH03LyyNw19qvgLmMyO/view?usp=sharing) and unzip it
 
 #### Run from source code
 1. Clone this repository
