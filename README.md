@@ -66,38 +66,38 @@ app folder contains the source code for Top2VecApp
 
 #### models folder
 - encoder.py
-> Contains helper classes for loading the model and running model inference
+    - Contains helper classes for loading the model and running model inference
 
 - pipeline.py
-> Contains helper classes for processing the input text corpus through Top2Vec algorithm and then saving the results to excel files
+    - Contains helper classes for processing the input text corpus through Top2Vec algorithm and then saving the results to excel files
 
 - tokenizer.py 
-> Contains helper functions and classes to tokenize text
+    - Contains helper functions and classes to tokenize text
 
 - top2vec.py
-> A lightweight version of the original [Top2Vec](https://github.com/ddangelov/Top2Vec) library
+    - A lightweight version of the original [Top2Vec](https://github.com/ddangelov/Top2Vec) library
 
 - vocab.txt
-> Contains the tokens used for tokenizing text
+    - Contains the tokens used for tokenizing text
 
 - sent-transformer.onnx
-> The natural language processing (NLP) model used for obtaining the text embeddings
+    - The natural language processing (NLP) model used for obtaining the text embeddings
 
 #### static folder
 - appscripts folder
-> Contains the JavaScript libraries and scripts used in Top2VecApp
+    - Contains the JavaScript libraries and scripts used in Top2VecApp
 
 - images folder
-> Contains Top2VecApp desktop application icon
+    - Contains Top2VecApp desktop application icon
 
 - styles folder
-> Contains the stylesheets used for styling Top2VecApp
+    - Contains the stylesheets used for styling Top2VecApp
 
 #### templates folder
-> Contains the HTML templates used in Top2VecApp
+- Contains the HTML templates used in Top2VecApp
 
 #### app.py
-> Contains the backend logic of Top2VecApp
+- Contains the backend logic of Top2VecApp
 
 #### config.py
-> Contains the configurations used for Top2VecApp
+- Contains the application configurations for Top2VecApp
