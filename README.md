@@ -12,7 +12,7 @@ When the user launches Top2VecApp, he is directed to the file upload page, where
 
 Upon storing the CSV file, a job is submitted to the worker thread and the user is directed to the progress page. Every second, the main application thread sends a GET request to the worker thread to query about the job status. Once the main application thread receives the signal from the worker thread that the job is completed, the user is directed to the download page where he can download the zipped job results.
 
-Underneath the hood, the job processed by the worker thread consists of the the following stages. 
+Underneath the hood, the job processed by the worker thread consists of the following stages. 
 1.  Once the job is submitted, the CSV file is loaded into memory and its text corpus is tokenized (i.e. individual words are broken up into smaller subwords). 
 2.  The tokenized text corpus is then fed through the pretrained transformer-based natural language processing (NLP) model, [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), which outputs the corresponding text embeddings for the input text corpus (i.e. numerical vector representation of text). 
 3. Following which, the text embeddings are passed through Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) algorithm for dimensionality reduction.
