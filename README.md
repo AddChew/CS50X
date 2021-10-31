@@ -3,7 +3,6 @@ Top2VecApp is a desktop application, offering topic modelling capabilities based
 
 ## Video demo
 Please refer [here](https://youtu.be/H4jQL4AT9aM) for a video demo of Top2VecApp in action.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/H4jQL4AT9aM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## How the application works
 At its core, Top2VecApp is a web application embedded into a desktop application.
@@ -15,9 +14,9 @@ Upon storing the CSV file, a job is submitted to the worker thread and the user 
 Underneath the hood, the job processed by the worker thread consists of the following stages. 
 1.  Once the job is submitted, the CSV file is loaded into memory and its text corpus is tokenized (i.e. individual words are broken up into smaller subwords). 
 2.  The tokenized text corpus is then fed through the pretrained transformer-based natural language processing (NLP) model, [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2), which outputs the corresponding text embeddings for the input text corpus (i.e. numerical vector representation of text). 
-3. Following which, the text embeddings are passed through Uniform Manifold Approximation and Projection [UMAP](https://github.com/lmcinnes/umap) algorithm for dimensionality reduction.
-4. Thereafter, the compressed text embeddings are clustered into topics using Hierarchical Density-Based Spatial Clustering of Applications with Noise [HDBSCAN](https://github.com/scikit-learn-contrib/hdbscan) algorithm.
-5. An extractive summary of each topic is obtained based on the top 5 text content closest to the topic centroid in terms of cosine distance.
+3. Following which, the text embeddings are passed through Uniform Manifold Approximation and Projection ([UMAP](https://github.com/lmcinnes/umap)) algorithm for dimensionality reduction.
+4. Thereafter, the compressed text embeddings are clustered into topics using Hierarchical Density-Based Spatial Clustering of Applications with Noise ([HDBSCAN](https://github.com/scikit-learn-contrib/hdbscan)) algorithm.
+5. An extractive summary of each topic is obtained based on the top 5 text responses closest to the topic centroid in terms of cosine distance.
 6. The clustering results and extractive summaries are then written into two separate excel files, zipped together into a single folder for download.  
 
 ## Installation Instructions
